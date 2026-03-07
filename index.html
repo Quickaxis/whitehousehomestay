@@ -66,57 +66,34 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    /* Hero Scroll Strip */
-    @keyframes hero-scroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .hero-scroll-container {
+    /* Hero Slideshow */
+    .hero-slideshow {
       position: absolute;
-      bottom: 24px;
-      left: 0;
+      inset: 0;
       width: 100%;
-      overflow: hidden;
-      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-      z-index: 5;
+      height: 100%;
+      z-index: 0;
     }
 
-    .hero-scroll-track {
-      display: flex;
-      width: max-content;
-      animation: hero-scroll 40s linear infinite;
-    }
-
-    .hero-scroll-group {
-      display: flex;
-      gap: 16px;
-      padding-right: 16px;
-    }
-
-    .scroll-img {
-      height: 200px;
-      aspect-ratio: 3/2;
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      border-radius: 12px;
-      flex-shrink: 0;
-      background: rgba(255, 255, 255, 0.15);
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
     }
 
-    @media (max-width: 768px) {
-      .scroll-img {
-        height: 140px;
-      }
+    .hero-slide.active {
+      opacity: 1;
+    }
 
-      .hero-scroll-container {
-        bottom: 16px;
-      }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 10;
     }
 
     /* Marquee Animations */
@@ -879,64 +856,20 @@
     <button class="pill-nav-btn" onclick="openBookingModal()">BOOK NOW</button>
   </header>
   <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden" style="padding-top: 90px;">
-    <div class="absolute inset-0 bg-cover bg-center" data-alt="Luxury colonial style homestay exterior at dusk"
-      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-ITNGyq44za89Ks5t-SLmW_Im79DNYeVJcV-wID6f8Bu-qzLD23KXbVrF_UB3fnNU5RLTwJkUul4hj2HmTnev1ZgE03hZriamUKgZNI1xx3_IVc-A_8r3R2dPOdNAMKZcPzSv9BsfZRJ-NLrjj0JK-9Z2dw4RNWfaefYR9_wkjrf5RUNtOjwAYH43B8Jh1BnPNmS8OF8pQAJoyzZ8F-NO30Wb17AXzhOtWCBSBjd898fwF86mklWYU-FGThoyaLqfUgThSz2YqBI');">
+  <section class="relative w-full overflow-hidden" style="height: 100vh; height: 100svh;">
+    <div class="hero-slideshow">
+      <img src="" class="hero-slide active" alt="">
+      <img src="" class="hero-slide" alt="">
+      <img src="" class="hero-slide" alt="">
+      <img src="" class="hero-slide" alt="">
+      <img src="" class="hero-slide" alt="">
+      <img src="" class="hero-slide" alt="">
+      <img src="" class="hero-slide" alt="">
+      <img src="" class="hero-slide" alt="">
+      <img src="" class="hero-slide" alt="">
+      <img src="" class="hero-slide" alt="">
     </div>
-    <div class="absolute inset-0 bg-black/40"></div>
-    <div class="relative z-10 glass-panel p-8 md:p-16 rounded-xl max-w-4xl text-center mx-4">
-      <h1 style="margin-bottom: 24px; line-height: 1.2;">
-        <span
-          style="display: block; font-family: 'Cormorant Garamond', serif; color: #FFFFFF; font-size: 56px; font-weight: 400; font-style: normal; margin-bottom: 8px;">A
-          Home Away</span>
-        <span
-          style="font-family: 'Cormorant Garamond', serif; color: #C9A84C; font-size: 72px; font-weight: 700; font-style: italic;">From
-          Home.</span>
-      </h1>
-      <p class="text-off-white/80 text-lg md:text-xl max-w-2xl mx-auto font-light mb-10 leading-relaxed">
-        Experience heritage and curated comfort in our private sanctuary located in the tea capital of India, Dibrugarh.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <button
-          class="bg-accent text-primary px-8 py-4 rounded font-bold text-lg hover:scale-105 transition-transform font-bold uppercase tracking-[0.08em]">EXPLORE
-          ROOMS</button>
-        <button
-          class="border-2 border-off-white text-off-white px-8 py-4 rounded font-bold text-lg hover:bg-off-white/10 transition-colors font-bold uppercase tracking-[0.08em]">OUR
-          STORY</button>
-      </div>
-    </div>
-
-    <!-- Hero Scroll Strip -->
-    <div class="hero-scroll-container">
-      <div class="hero-scroll-track">
-        <!-- Group 1 -->
-        <div class="hero-scroll-group">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-        </div>
-        <!-- Group 2 (Duplicated for loop) -->
-        <div class="hero-scroll-group" aria-hidden="true">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-        </div>
-      </div>
-    </div>
+    <div class="hero-overlay"></div>
   </section>
   <!-- STATS BAR -->
   <section class="bg-primary px-6 stats-bar" style="padding-top: 32px; padding-bottom: 32px;">
@@ -2458,6 +2391,19 @@
           openBookingModal();
         };
       });
+    });
+
+    // Hero Slideshow
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.hero-slide');
+      if (slides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add('active');
+        }, 5000); // 5 seconds per slide
+      }
     });
   </script>
 </body>
