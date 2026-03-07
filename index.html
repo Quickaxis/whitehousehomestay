@@ -99,6 +99,181 @@
     .marquee-container:hover .animate-marquee-right {
       animation-play-state: paused;
     }
+
+    @media (max-width: 768px) {
+
+      /* NAVBAR */
+      nav,
+      header {
+        padding: 10px 16px !important;
+      }
+
+      .nav-logo-text,
+      .navbar-brand {
+        font-size: 14px !important;
+      }
+
+      .nav-links {
+        display: none !important;
+      }
+
+      .book-now-btn,
+      .btn-book {
+        font-size: 12px !important;
+        padding: 8px 14px !important;
+        white-space: nowrap !important;
+      }
+
+      /* HERO */
+      .hero h1,
+      .hero-title {
+        font-size: 36px !important;
+        line-height: 1.2 !important;
+      }
+
+      .hero-subtitle,
+      .hero p {
+        font-size: 15px !important;
+      }
+
+      .hero-buttons {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+
+      .hero-buttons a,
+      .hero-buttons button {
+        width: 100% !important;
+        text-align: center !important;
+      }
+
+      /* STATS BAR */
+      .stats-bar,
+      .stats-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0 !important;
+      }
+
+      .stat-item {
+        font-size: 28px !important;
+        padding: 20px 10px !important;
+      }
+
+      .stat-divider {
+        display: none !important;
+      }
+
+      /* ABOUT SECTION */
+      .about-grid,
+      .about-layout {
+        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
+      }
+
+      .about-image {
+        width: 100% !important;
+        height: 280px !important;
+      }
+
+      .about-content h2 {
+        font-size: 32px !important;
+      }
+
+      /* AMENITIES */
+      .amenities h2,
+      .amenities-title {
+        font-size: 28px !important;
+        word-break: keep-all !important;
+      }
+
+      .amenities-grid {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      /* ROOMS */
+      .rooms-grid,
+      .masonry-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .room-card {
+        width: 100% !important;
+      }
+
+      .room-card .book-overlay,
+      .room-card .book-popup {
+        display: none !important;
+      }
+
+      /* LOCATIONS */
+      .locations-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* BEYOND YOUR ROOM */
+      .experiences-grid,
+      .beyond-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .experiences h2,
+      .beyond-title {
+        font-size: 32px !important;
+        word-break: keep-all !important;
+      }
+
+      /* REVIEWS */
+      .reviews-track,
+      .marquee-track {
+        gap: 16px !important;
+      }
+
+      .review-card {
+        min-width: 280px !important;
+        max-width: 85vw !important;
+      }
+
+      /* INSTAGRAM / MOMENTS */
+      .instagram-title,
+      .moments-title {
+        font-size: 28px !important;
+        word-break: keep-all !important;
+      }
+
+      .instagram-grid {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      /* FOUNDER QUOTE */
+      .founder-quote,
+      .quote-text {
+        font-size: 22px !important;
+        line-height: 1.5 !important;
+        padding: 24px 20px !important;
+      }
+
+      .founder-section {
+        padding: 48px 20px !important;
+      }
+
+      /* FOOTER */
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* GLOBAL */
+      section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      h1,
+      h2 {
+        word-break: keep-all !important;
+        overflow-wrap: break-word !important;
+      }
+    }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
