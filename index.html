@@ -608,7 +608,7 @@
     .reveal {
       opacity: 0;
       transform: translateY(30px);
-      transition: opacity 1.2s ease, transform 1.2s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
     .reveal.visible {
@@ -2248,14 +2248,14 @@
         h2.innerHTML = text.split('').map(char => `<span class='inline-block char'>${char === ' ' ? '&nbsp;' : char}</span>`).join('');
         gsap.from(h2.querySelectorAll('.char'), {
           scrollTrigger: { trigger: h2, start: 'top 85%' },
-          y: 20, opacity: 0, stagger: 0.08, duration: 1.2, ease: 'power2.out'
+          y: 20, opacity: 0, stagger: 0.08, duration: 0.8, ease: 'power2.out'
         });
       });
 
       // Simple bulk fade-in for specific headings
       gsap.from('#about-heading', {
         scrollTrigger: { trigger: '#about-heading', start: 'top 85%' },
-        y: 30, opacity: 0, duration: 1.2, ease: 'power2.out'
+        y: 30, opacity: 0, duration: 0.8, ease: 'power2.out'
       });
 
       // Image slide-in
@@ -2263,7 +2263,7 @@
         const direction = i % 2 === 0 ? -50 : 50;
         gsap.from(img, {
           scrollTrigger: { trigger: img, start: 'top 85%' },
-          x: direction, opacity: 0, duration: 1.2, ease: 'power2.out'
+          x: direction, opacity: 0, duration: 0.8, ease: 'power2.out'
         });
       });
 
@@ -2274,7 +2274,7 @@
         if (grid) {
           gsap.from(grid.children, {
             scrollTrigger: { trigger: grid, start: 'top 85%' },
-            y: 40, opacity: 0, stagger: 0.2, duration: 1.2, ease: 'power2.out'
+            y: 40, opacity: 0, stagger: 0.2, duration: 0.8, ease: 'power2.out'
           });
         }
       });
