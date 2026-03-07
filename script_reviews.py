@@ -19,7 +19,7 @@ reviews_7_11 = [
 
 def make_card(r):
     return f"""
-        <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+        <div class="review-card glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
           <div class="flex text-accent mb-4">
             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
@@ -47,7 +47,7 @@ row2_html = f"""<div class="flex gap-8 animate-marquee-right w-max mt-8">
 </div>"""
 
 replacement = f"""  <!-- REVIEWS -->
-  <section class="py-24 bg-off-white overflow-hidden">
+  <section class="py-24 bg-off-white overflow-hidden reviews-section">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-primary text-4xl md:text-5xl font-bold md:text-6xl">What Our Guests Say</h2>
