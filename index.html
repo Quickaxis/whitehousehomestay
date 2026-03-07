@@ -100,6 +100,15 @@
       animation-play-state: paused;
     }
 
+    .experiences-card img,
+    .beyond-card img,
+    [class*="experience"] img,
+    [class*="explore"] img {
+      border: 2px solid #C9A84C;
+      border-radius: 12px;
+      box-shadow: 0 0 16px rgba(201, 168, 76, 0.2);
+    }
+
     @media (max-width: 768px) {
 
 
@@ -273,6 +282,21 @@
       .beyond-title {
         font-size: 32px !important;
         word-break: keep-all !important;
+      }
+
+      .experiences-card img,
+      .beyond-card img,
+      [class*="experience"] img,
+      [class*="explore"] img {
+        border: 2px solid #C9A84C !important;
+        border-radius: 12px !important;
+        box-shadow: 0 0 12px rgba(201, 168, 76, 0.25) !important;
+      }
+
+      [class*="experience"],
+      [class*="explore"],
+      [class*="beyond"] {
+        padding: 48px 20px !important;
       }
 
       /* REVIEWS */
@@ -1197,7 +1221,7 @@
       <div class="text-center mb-16">
         <h4 class="text-accent uppercase tracking-[0.2em] text-sm font-bold mb-4">Explore</h4>
         <h2 class="text-off-white text-4xl md:text-5xl font-bold font-bold text-5xl md:text-6xl"
-          style="font-size: clamp(22px, 5vw, 52px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          style="font-size: clamp(28px, 6vw, 52px); white-space: nowrap;">
           Beyond Your Room</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
