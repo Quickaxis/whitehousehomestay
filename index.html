@@ -76,59 +76,6 @@
       transition: opacity 1.2s ease;
     }
 
-    /* Hero Scroll Strip */
-    @keyframes hero-scroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .hero-scroll-container {
-      position: absolute;
-      bottom: 24px;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-      z-index: 5;
-    }
-
-    .hero-scroll-track {
-      display: flex;
-      width: max-content;
-      animation: hero-scroll 40s linear infinite;
-    }
-
-    .hero-scroll-group {
-      display: flex;
-      gap: 16px;
-      padding-right: 16px;
-    }
-
-    .scroll-img {
-      height: 200px;
-      aspect-ratio: 3/2;
-      object-fit: cover;
-      border-radius: 12px;
-      flex-shrink: 0;
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    @media (max-width: 768px) {
-      .scroll-img {
-        height: 140px;
-      }
-
-      .hero-scroll-container {
-        bottom: 16px;
-      }
-    }
-
     /* Marquee Animations */
     @keyframes marquee-left {
       0% {
@@ -915,37 +862,7 @@
     <div class="absolute inset-0 bg-black/40 z-10"></div>
 
 
-    <!-- Hero Scroll Strip -->
-    <div class="hero-scroll-container">
-      <div class="hero-scroll-track">
-        <!-- Group 1 -->
-        <div class="hero-scroll-group">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-        </div>
-        <!-- Group 2 (Duplicated for loop) -->
-        <div class="hero-scroll-group" aria-hidden="true">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-          <img src="" class="scroll-img" alt="">
-        </div>
-      </div>
-    </div>
+
   </section>
   <!-- STATS BAR -->
   <section class="bg-primary px-6 stats-bar" style="padding-top: 32px; padding-bottom: 32px;">
