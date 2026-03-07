@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>The White House Homestay | Dibrugarh</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;family=Noto+Sans:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1B3D2F", // Dark Green
+            "accent": "#C9A84C",  // Gold
+            "off-white": "#F5F0E8",
+            "background-light": "#f6f8f7",
+            "background-dark": "#131f1a",
+          },
+          fontFamily: {
+            "display": ["Cormorant Garamond", "serif"],
+            "sans": ["Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .glass-panel {
+      background: rgba(27, 61, 47, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Marquee Animations */
+    @keyframes marquee-left {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes marquee-right {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .animate-marquee-left {
+      animation: marquee-left 40s linear infinite;
+    }
+
+    .animate-marquee-right {
+      animation: marquee-right 40s linear infinite;
+    }
+
+    .marquee-container:hover .animate-marquee-left,
+    .marquee-container:hover .animate-marquee-right {
+      animation-play-state: paused;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+  <!-- Header / Nav -->
+  <header class="fixed top-0 left-0 w-full bg-primary py-4 px-6" style="z-index: 1000;">
+    <div class="w-full flex items-center justify-between px-4 lg:px-12">
+      <div style="display: flex; align-items: center; justify-content: flex-start; gap: 12px; background: transparent;">
+        <img src="gallery/logo/logo.png" alt="The White House Homestay"
+          style="height: 64px; width: auto; background: transparent; border: none; object-fit: contain;">
+        <span
+          style="font-family: 'Cormorant Garamond', serif; color: #C9A84C; font-size: 24px; font-weight: 700; text-transform: uppercase;">White
+          House</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-white uppercase"
+        style="font-weight: 600; font-size: 13px; letter-spacing: 0.12em;">
+        <a class="transition-colors duration-200 hover:text-accent" href="#about">About</a>
+        <a class="transition-colors duration-200 hover:text-accent" href="#rooms">Rooms</a>
+        <a class="transition-colors duration-200 hover:text-accent" href="#amenities">Amenities</a>
+        <a class="transition-colors duration-200 hover:text-accent" href="#experiences">Experiences</a>
+      </nav>
+      <button class="bg-accent text-primary transition-all hover:bg-accent/90"
+        style="font-weight: 700; letter-spacing: 0.1em; padding: 12px 24px; border-radius: 4px;">
+        BOOK NOW
+      </button>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" data-alt="Luxury colonial style homestay exterior at dusk"
+      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-ITNGyq44za89Ks5t-SLmW_Im79DNYeVJcV-wID6f8Bu-qzLD23KXbVrF_UB3fnNU5RLTwJkUul4hj2HmTnev1ZgE03hZriamUKgZNI1xx3_IVc-A_8r3R2dPOdNAMKZcPzSv9BsfZRJ-NLrjj0JK-9Z2dw4RNWfaefYR9_wkjrf5RUNtOjwAYH43B8Jh1BnPNmS8OF8pQAJoyzZ8F-NO30Wb17AXzhOtWCBSBjd898fwF86mklWYU-FGThoyaLqfUgThSz2YqBI');">
+    </div>
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 glass-panel p-8 md:p-16 rounded-xl max-w-4xl text-center mx-4">
+      <h1 style="margin-bottom: 24px; line-height: 1.2;">
+        <span
+          style="display: block; font-family: 'Cormorant Garamond', serif; color: #FFFFFF; font-size: 56px; font-weight: 400; font-style: normal; margin-bottom: 8px;">A
+          Home Away</span>
+        <span
+          style="font-family: 'Cormorant Garamond', serif; color: #C9A84C; font-size: 72px; font-weight: 700; font-style: italic;">From
+          Home.</span>
+      </h1>
+      <p class="text-off-white/80 text-lg md:text-xl max-w-2xl mx-auto font-light mb-10 leading-relaxed">
+        Experience heritage and curated comfort in our private sanctuary located in the tea capital of India, Dibrugarh.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-accent text-primary px-8 py-4 rounded font-bold text-lg hover:scale-105 transition-transform font-bold uppercase tracking-[0.08em]">EXPLORE
+          ROOMS</button>
+        <button
+          class="border-2 border-off-white text-off-white px-8 py-4 rounded font-bold text-lg hover:bg-off-white/10 transition-colors font-bold uppercase tracking-[0.08em]">OUR
+          STORY</button>
+      </div>
+    </div>
+  </section>
+  <!-- STATS BAR -->
+  <section class="bg-primary px-6" style="padding-top: 32px; padding-bottom: 32px;">
+    <div
+      class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center divide-y md:divide-y-0 md:divide-x"
+      style="border-color: rgba(201,168,76,0.3);">
+
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0">
+        <span
+          style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">6
+          Rooms</span>
+        <span
+          style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Boutique
+          Stays</span>
+      </div>
+
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0">
+        <span
+          style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">Est.
+          2025</span>
+        <span
+          style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Modern
+          Heritage</span>
+      </div>
+
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0">
+        <span
+          style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">4.9★
+          Rating</span>
+        <span
+          style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Guest
+          Excellence</span>
+      </div>
+
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0">
+        <span
+          style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">Dibrugarh,
+          Assam</span>
+        <span
+          style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Tea
+          Capital</span>
+      </div>
+
+    </div>
+  </section>
+  <!-- ABOUT SECTION -->
+  <section class="relative px-6 overflow-hidden"
+    style="padding-top: 80px; padding-bottom: 80px; background-color: #FAF7F2; background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23c9a84c\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"
+    id="about">
+
+    <!-- Decorative faint gold motif in top right -->
+    <div class="absolute top-10 right-10 text-accent opacity-10 pointer-events-none">
+      <span class="material-symbols-outlined" style="font-size: 160px;">psychiatry</span>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+      <!-- LEFT COLUMN: Image Stack -->
+      <div class="relative mt-8 md:mt-0 px-4 md:px-0">
+        <!-- Thin gold border frame -->
+        <div class="absolute inset-0 rounded-xl" style="border: 2px solid #C9A84C; transform: translate(12px, 12px);">
+        </div>
+
+        <!-- Main tall image -->
+        <img alt="Heritage Bedroom" class="relative rounded-xl shadow-2xl w-full h-[500px] md:h-[600px] object-cover"
+          data-alt="Warm heritage bedroom with wooden floors and colonial windows"
+          src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=1000&auto=format&fit=crop" />
+
+        <!-- Second square image offset -->
+        <div class="absolute -bottom-6 -right-6 z-20">
+          <img alt="Assamese Breakfast" class="w-40 h-40 md:w-52 md:h-52 object-cover rounded-lg shadow-xl"
+            style="border: 6px solid #FAF7F2;"
+            src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=500&auto=format&fit=crop" />
+        </div>
+
+        <!-- Gold quote tag -->
+        <div class="absolute -bottom-6 -left-6 bg-accent py-4 px-6 md:p-6 shadow-xl z-30" style="border-radius: 8px;">
+          <p class="text-primary font-display text-xl md:text-2xl font-bold italic">"Your home in Dibrugarh."</p>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Text -->
+      <div class="relative z-10 pt-16 md:pt-0">
+        <h4 class="text-accent uppercase tracking-[0.2em] text-sm font-bold mb-4">DIBRUGARH, ASSAM</h4>
+
+        <h2 id="about-heading"
+          style="white-space: normal; word-break: keep-all; overflow-wrap: normal; font-family: 'Cormorant Garamond', serif; margin-bottom: 32px; line-height: 1.1;">
+          <span style="display: block; color: #1B3D2F; font-size: 52px; font-weight: 700;">A Home Away</span>
+          <span style="display: block; color: #C9A84C; font-size: 52px; font-weight: 700; font-style: italic;">From
+            Home.</span>
+        </h2>
+
+        <div class="space-y-6 text-slate-600 text-lg leading-relaxed font-sans font-light mb-10">
+          <p>Nestled in the heart of Dibrugarh, The White House is where Assamese warmth meets modern comfort. Whether
+            you're here for a quiet weekend, a family celebration, or simply to escape the city — we have a room that
+            feels like yours.</p>
+        </div>
+
+        <!-- Feature Rows -->
+        <div class="flex flex-col gap-6 mb-10 border-t border-accent/20 pt-10">
+
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-accent text-3xl">home</span>
+            <div>
+              <h5 class="text-primary font-bold text-lg mb-1">6 Unique Rooms</h5>
+              <p class="text-slate-500 text-sm font-light">Each designed with a distinct personality</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-accent text-3xl">location_on</span>
+            <div>
+              <h5 class="text-primary font-bold text-lg mb-1">2 Locations</h5>
+              <p class="text-slate-500 text-sm font-light">Both in the heart of Dibrugarh</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-accent text-3xl">star</span>
+            <div>
+              <h5 class="text-primary font-bold text-lg mb-1">4.9 Rated</h5>
+              <p class="text-slate-500 text-sm font-light">By guests from across India and abroad</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button
+          class="flex items-center gap-2 text-primary hover:text-accent font-bold group uppercase tracking-[0.08em] transition-colors">
+          LEARN MORE ABOUT OUR HERITAGE
+          <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- AMENITIES -->
+  <section class="py-24 px-6 bg-off-white" id="amenities">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-primary text-4xl md:text-5xl font-bold mb-4 font-bold text-5xl md:text-6xl">Everything You Need,
+          Nothing You Don't.</h2>
+        <div class="w-24 h-1 bg-accent mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Amenity Cards -->
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-accent/10 hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-accent text-4xl mb-4">wifi</span>
+          <h3 class="text-primary text-xl font-bold mb-2">Free Wi-Fi</h3>
+          <p class="text-slate-600 text-sm">High-speed connectivity across the property.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-accent/10 hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-accent text-4xl mb-4">coffee</span>
+          <h3 class="text-primary text-xl font-bold mb-2">Assamese Breakfast</h3>
+          <p class="text-slate-600 text-sm">Authentic flavors to start your day right.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-accent/10 hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-accent text-4xl mb-4">park</span>
+          <h3 class="text-primary text-xl font-bold mb-2">Garden Terrace</h3>
+          <p class="text-slate-600 text-sm">A lush, green sanctuary for evening relaxation.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-accent/10 hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-accent text-4xl mb-4">ac_unit</span>
+          <h3 class="text-primary text-xl font-bold mb-2">Air Conditioning</h3>
+          <p class="text-slate-600 text-sm">Personal climate control in every room.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-accent/10 hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-accent text-4xl mb-4">clean_hands</span>
+          <h3 class="text-primary text-xl font-bold mb-2">Daily Housekeeping</h3>
+          <p class="text-slate-600 text-sm">Immaculate standards of cleanliness.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-accent/10 hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-accent text-4xl mb-4">local_parking</span>
+          <h3 class="text-primary text-xl font-bold mb-2">Parking</h3>
+          <p class="text-slate-600 text-sm">Secure on-site parking for all guests.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-accent/10 hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-accent text-4xl mb-4">hot_tub</span>
+          <h3 class="text-primary text-xl font-bold mb-2">Hot Water</h3>
+          <p class="text-slate-600 text-sm">Available 24/7 for your comfort.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-accent/10 hover:shadow-md transition-shadow">
+          <span class="material-symbols-outlined text-accent text-4xl mb-4">room_service</span>
+          <h3 class="text-primary text-xl font-bold mb-2">Room Service</h3>
+          <p class="text-slate-600 text-sm">Fresh meals delivered to your door.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ROOMS -->
+  <section class="py-[60px] px-[60px]" style="background-color: #1B3D2F;" id="rooms">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+        <h4
+          style="color: #C9A84C; text-transform: uppercase; font-size: 14px; font-weight: 700; letter-spacing: 0.15em; margin-bottom: 12px;">
+          OUR SANCTUARY</h4>
+        <h2 style="font-family: 'Cormorant Garamond', serif; color: #C9A84C; font-size: 52px; font-weight: 700;">Our
+          Rooms</h2>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
+
+        <!-- Column 1 -->
+        <div class="flex flex-col gap-4">
+          <!-- The Cherryblossom -->
+          <div class="group relative overflow-hidden w-full h-[380px] bg-[#FBCFE8] cursor-pointer rounded-[16px]"
+            data-carousel="true" data-index="0">
+            <span
+              class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 text-[#1B3D2F]/20"
+              style="font-size: 64px; pointer-events:none;">bed</span>
+
+            <div
+              class="carousel-inner w-full h-full relative z-10 flex transition-transform duration-300 ease-in-out group-hover:scale-[1.04] pointer-events-none">
+              <img src="gallery/CHEERY COLOUR - CHERRY BLOOSOM/94a41c2e-9aa7-4642-9a7f-2f199d821c1a.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #FBCFE8;"
+                alt="The Cherryblossom 1">
+              <img src="gallery/CHEERY COLOUR - CHERRY BLOOSOM/86112cd9-29ff-42bd-b35b-9fb11b75abf3.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #FBCFE8;"
+                alt="The Cherryblossom 2">
+              <img src="gallery/CHEERY COLOUR - CHERRY BLOOSOM/bbe2e2d3-7b35-4b65-a1f6-55cce451bd99.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #FBCFE8;"
+                alt="The Cherryblossom 3">
+            </div>
+
+            <button
+              class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, -1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_left</span>
+            </button>
+            <button
+              class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, 1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+            </button>
+
+            <div
+              class="absolute bottom-[60px] left-0 right-0 z-40 flex justify-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div class="dot w-1.5 h-1.5 rounded-full bg-[#C9A84C] transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+            </div>
+
+            <div
+              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/75 to-transparent transition-colors duration-300 group-hover:from-black/85 z-10 pointer-events-none">
+            </div>
+
+            <h3 class="absolute bottom-4 left-4 text-white font-bold z-20 pointer-events-none"
+              style="font-family: 'Cormorant Garamond', serif; font-size: 22px;">The Cherryblossom</h3>
+
+            <div
+              class="absolute bottom-4 right-4 bg-[#C9A84C] text-[#1B3D2F] px-3 py-1 rounded-full font-bold text-[12px] z-20 pointer-events-none">
+              ₹1,800 / night</div>
+
+            <a href="https://wa.me/919864872229" target="_blank"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#C9A84C]/90 text-[#1B3D2F] font-bold px-6 py-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 backdrop-blur-[4px]">
+              Book Now &rarr;
+            </a>
+          </div>
+
+          <!-- The Ocean Blue -->
+          <div class="group relative overflow-hidden w-full h-[280px] bg-[#BFDBFE] cursor-pointer rounded-[16px]"
+            data-carousel="true" data-index="0">
+            <span
+              class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 text-[#1B3D2F]/20"
+              style="font-size: 64px; pointer-events:none;">waves</span>
+
+            <div
+              class="carousel-inner w-full h-full relative z-10 flex transition-transform duration-300 ease-in-out group-hover:scale-[1.04] pointer-events-none">
+              <img src="gallery/BLUE ROOM - THE OCEAN BLUE/4243ec0c-aba4-42bc-babc-f983d4773909.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #BFDBFE;"
+                alt="The Ocean Blue 1">
+              <img src="gallery/BLUE ROOM - THE OCEAN BLUE/c8731749-c277-45a3-abad-66f4fd890366.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #BFDBFE;"
+                alt="The Ocean Blue 2">
+              <img src="gallery/BLUE ROOM - THE OCEAN BLUE/e1fbd6cc-43f4-4f47-b04a-f59d5c2166d8.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #BFDBFE;"
+                alt="The Ocean Blue 3">
+            </div>
+
+            <button
+              class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, -1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_left</span>
+            </button>
+            <button
+              class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, 1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+            </button>
+
+            <div
+              class="absolute bottom-[60px] left-0 right-0 z-40 flex justify-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div class="dot w-1.5 h-1.5 rounded-full bg-[#C9A84C] transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+            </div>
+
+            <div
+              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/75 to-transparent transition-colors duration-300 group-hover:from-black/85 z-10 pointer-events-none">
+            </div>
+
+            <h3 class="absolute bottom-4 left-4 text-white font-bold z-20 pointer-events-none"
+              style="font-family: 'Cormorant Garamond', serif; font-size: 22px;">The Ocean Blue</h3>
+
+            <div
+              class="absolute bottom-4 right-4 bg-[#C9A84C] text-[#1B3D2F] px-3 py-1 rounded-full font-bold text-[12px] z-20 pointer-events-none">
+              ₹1,800 / night</div>
+
+            <a href="https://wa.me/919864872229" target="_blank"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#C9A84C]/90 text-[#1B3D2F] font-bold px-6 py-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 backdrop-blur-[4px]">
+              Book Now &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="flex flex-col gap-4">
+          <!-- The Brown Brick -->
+          <div class="group relative overflow-hidden w-full h-[260px] bg-[#DEB887] cursor-pointer rounded-[16px]"
+            data-carousel="true" data-index="0">
+            <span
+              class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 text-[#1B3D2F]/20"
+              style="font-size: 64px; pointer-events:none;">foundation</span>
+
+            <div
+              class="carousel-inner w-full h-full relative z-10 flex transition-transform duration-300 ease-in-out group-hover:scale-[1.04] pointer-events-none">
+              <img src="gallery/BROWN ROOM - THE BROWN BRICK/c26d0fa4-2a56-4246-a980-018cd4058f68.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #DEB887;"
+                alt="The Brown Brick 1">
+              <img src="gallery/BROWN ROOM - THE BROWN BRICK/255b06dd-bdd4-4691-98c4-930208884226.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #DEB887;"
+                alt="The Brown Brick 2">
+              <img src="gallery/BROWN ROOM - THE BROWN BRICK/6ad40a8a-9ea5-4568-9ace-06e1ad8d5cca.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #DEB887;"
+                alt="The Brown Brick 3">
+            </div>
+
+            <button
+              class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, -1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_left</span>
+            </button>
+            <button
+              class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, 1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+            </button>
+
+            <div
+              class="absolute bottom-[60px] left-0 right-0 z-40 flex justify-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div class="dot w-1.5 h-1.5 rounded-full bg-[#C9A84C] transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+            </div>
+
+            <div
+              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/75 to-transparent transition-colors duration-300 group-hover:from-black/85 z-10 pointer-events-none">
+            </div>
+
+            <h3 class="absolute bottom-4 left-4 text-white font-bold z-20 pointer-events-none"
+              style="font-family: 'Cormorant Garamond', serif; font-size: 22px;">The Brown Brick</h3>
+
+            <div
+              class="absolute bottom-4 right-4 bg-[#C9A84C] text-[#1B3D2F] px-3 py-1 rounded-full font-bold text-[12px] z-20 pointer-events-none">
+              ₹1,800 / night</div>
+
+            <a href="https://wa.me/919864872229" target="_blank"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#C9A84C]/90 text-[#1B3D2F] font-bold px-6 py-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 backdrop-blur-[4px]">
+              Book Now &rarr;
+            </a>
+          </div>
+
+          <!-- The Orange Delight -->
+          <div class="group relative overflow-hidden w-full h-[400px] bg-[#FDE68A] cursor-pointer rounded-[16px]"
+            data-carousel="true" data-index="0">
+            <span
+              class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 text-[#1B3D2F]/20"
+              style="font-size: 64px; pointer-events:none;">wb_sunny</span>
+
+            <div
+              class="carousel-inner w-full h-full relative z-10 flex transition-transform duration-300 ease-in-out group-hover:scale-[1.04] pointer-events-none">
+              <img src="gallery/ORANGE ROOM - THE ORANGE DELIGHT/c99a2f77-2163-4a78-9523-3cf737eade08.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #FDE68A;"
+                alt="The Orange Delight 1">
+              <img src="gallery/ORANGE ROOM - THE ORANGE DELIGHT/5ffa2c65-ee1e-49ae-87e7-6c058481707e.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #FDE68A;"
+                alt="The Orange Delight 2">
+              <img src="gallery/ORANGE ROOM - THE ORANGE DELIGHT/4d553072-ed31-4386-9ef7-53d0b7474645.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #FDE68A;"
+                alt="The Orange Delight 3">
+            </div>
+
+            <button
+              class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, -1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_left</span>
+            </button>
+            <button
+              class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, 1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+            </button>
+
+            <div
+              class="absolute bottom-[60px] left-0 right-0 z-40 flex justify-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div class="dot w-1.5 h-1.5 rounded-full bg-[#C9A84C] transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+            </div>
+
+            <div
+              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/75 to-transparent transition-colors duration-300 group-hover:from-black/85 z-10 pointer-events-none">
+            </div>
+
+            <h3 class="absolute bottom-4 left-4 text-white font-bold z-20 pointer-events-none"
+              style="font-family: 'Cormorant Garamond', serif; font-size: 22px;">The Orange Delight</h3>
+
+            <div
+              class="absolute bottom-4 right-4 bg-[#C9A84C] text-[#1B3D2F] px-3 py-1 rounded-full font-bold text-[12px] z-20 pointer-events-none">
+              ₹1,800 / night</div>
+
+            <a href="https://wa.me/919864872229" target="_blank"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#C9A84C]/90 text-[#1B3D2F] font-bold px-6 py-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 backdrop-blur-[4px]">
+              Book Now &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="flex flex-col gap-4">
+          <!-- The Green Monaco -->
+          <div class="group relative overflow-hidden w-full h-[320px] bg-[#A7F3D0] cursor-pointer rounded-[16px]"
+            data-carousel="true" data-index="0">
+            <span
+              class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 text-[#1B3D2F]/20"
+              style="font-size: 64px; pointer-events:none;">park</span>
+
+            <div
+              class="carousel-inner w-full h-full relative z-10 flex transition-transform duration-300 ease-in-out group-hover:scale-[1.04] pointer-events-none">
+              <img src="gallery/GREEN ROOM - THE  GREEN MONACO/604e242f-08b9-44b8-97a3-ecccf167a8fc.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #A7F3D0;"
+                alt="The Green Monaco 1">
+              <img src="gallery/GREEN ROOM - THE  GREEN MONACO/76e844fd-a4dc-4469-bb24-e03ffafb670c.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #A7F3D0;"
+                alt="The Green Monaco 2">
+              <img src="gallery/GREEN ROOM - THE  GREEN MONACO/ae7f943e-f562-47aa-a836-c0717d7080d9.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #A7F3D0;"
+                alt="The Green Monaco 3">
+            </div>
+
+            <button
+              class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, -1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_left</span>
+            </button>
+            <button
+              class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, 1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+            </button>
+
+            <div
+              class="absolute bottom-[60px] left-0 right-0 z-40 flex justify-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div class="dot w-1.5 h-1.5 rounded-full bg-[#C9A84C] transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+            </div>
+
+            <div
+              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/75 to-transparent transition-colors duration-300 group-hover:from-black/85 z-10 pointer-events-none">
+            </div>
+
+            <h3 class="absolute bottom-4 left-4 text-white font-bold z-20 pointer-events-none"
+              style="font-family: 'Cormorant Garamond', serif; font-size: 22px;">The Green Monaco</h3>
+
+            <div
+              class="absolute bottom-4 right-4 bg-[#C9A84C] text-[#1B3D2F] px-3 py-1 rounded-full font-bold text-[12px] z-20 pointer-events-none">
+              ₹1,800 / night</div>
+
+            <a href="https://wa.me/919864872229" target="_blank"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#C9A84C]/90 text-[#1B3D2F] font-bold px-6 py-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 backdrop-blur-[4px]">
+              Book Now &rarr;
+            </a>
+          </div>
+
+          <!-- The Amazon -->
+          <div class="group relative overflow-hidden w-full h-[340px] bg-[#6EE7B7] cursor-pointer rounded-[16px]"
+            data-carousel="true" data-index="0">
+            <span
+              class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 text-[#1B3D2F]/20"
+              style="font-size: 64px; pointer-events:none;">forest</span>
+
+            <div
+              class="carousel-inner w-full h-full relative z-10 flex transition-transform duration-300 ease-in-out group-hover:scale-[1.04] pointer-events-none">
+              <img src="gallery/GREEN AND BADGE  - THE AMAZON/d6a40c8a-ec87-4ec4-a5e8-084f8f0ad5e3.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #6EE7B7;"
+                alt="The Amazon 1">
+              <img src="gallery/GREEN AND BADGE  - THE AMAZON/1d3a2091-54c0-4080-856f-0797136fc036.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #6EE7B7;"
+                alt="The Amazon 2">
+              <img src="gallery/GREEN AND BADGE  - THE AMAZON/34cc6179-d5bf-4971-be6d-606b58f4c566.jpg"
+                class="w-full h-full object-cover flex-shrink-0 block" style="background-color: #6EE7B7;"
+                alt="The Amazon 3">
+            </div>
+
+            <button
+              class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, -1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_left</span>
+            </button>
+            <button
+              class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-40 text-white bg-black/20 hover:bg-black/40 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto"
+              onclick="moveCarousel(event, this, 1)">
+              <span class="material-symbols-outlined" style="font-size: 20px;">chevron_right</span>
+            </button>
+
+            <div
+              class="absolute bottom-[60px] left-0 right-0 z-40 flex justify-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div class="dot w-1.5 h-1.5 rounded-full bg-[#C9A84C] transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+              <div class="dot w-1.5 h-1.5 rounded-full bg-white/50 transition-colors"></div>
+            </div>
+
+            <div
+              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/75 to-transparent transition-colors duration-300 group-hover:from-black/85 z-10 pointer-events-none">
+            </div>
+
+            <h3 class="absolute bottom-4 left-4 text-white font-bold z-20 pointer-events-none"
+              style="font-family: 'Cormorant Garamond', serif; font-size: 22px;">The Amazon</h3>
+
+            <div
+              class="absolute bottom-4 right-4 bg-[#C9A84C] text-[#1B3D2F] px-3 py-1 rounded-full font-bold text-[12px] z-20 pointer-events-none">
+              ₹1,800 / night</div>
+
+            <a href="https://wa.me/919864872229" target="_blank"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#C9A84C]/90 text-[#1B3D2F] font-bold px-6 py-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 backdrop-blur-[4px]">
+              Book Now &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Call to Action Link -->
+      <div class="mt-12 text-center">
+        <a href="#rooms"
+          style="color: #C9A84C; font-weight: 700; font-size: 16px; letter-spacing: 0.05em; text-decoration: none;"
+          class="hover:opacity-80 transition-opacity">View All Rooms &rarr;</a>
+      </div>
+
+      <!-- Pricing Note -->
+      <div class="text-center" style="padding: 20px;">
+        <p style="color: #C9A84C; font-size: 15px; font-style: italic; letter-spacing: 0.05em; margin: 0;">
+          All rooms start at ₹1,800/night &middot; 2 BHK for couples from ₹2,800 &middot; 2 BHK for birthdays &amp;
+          parties ₹3,300 &middot; 3 BHK ₹4,700 &middot; 4 BHK group stays ₹6,000 &middot; Call us to combine rooms
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <!-- HOUSE RULES -->
+  <section class="py-24 px-6 bg-off-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-primary text-4xl md:text-5xl font-bold mb-4 font-bold text-5xl md:text-6xl">A Few Things to Keep
+          in Mind.</h2>
+        <p class="text-slate-600 italic">To ensure every guest enjoys a peaceful and comfortable stay.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-8">
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-accent">schedule</span>
+          <div>
+            <h4 class="text-primary font-bold">Check-in 2PM / Check-out 11AM</h4>
+            <p class="text-slate-600 text-sm font-normal text-slate-500">Flexible check-in upon prior request and
+              availability.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-accent">smoke_free</span>
+          <div>
+            <h4 class="text-primary font-bold">No smoking indoors</h4>
+            <p class="text-slate-600 text-sm font-normal text-slate-500">Smoking is permitted in designated outdoor
+              areas only.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-accent">pets</span>
+          <div>
+            <h4 class="text-primary font-bold">Pets not permitted</h4>
+            <p class="text-slate-600 text-sm font-normal text-slate-500">To maintain a clean environment for all guests.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-accent">volume_off</span>
+          <div>
+            <h4 class="text-primary font-bold">Quiet hours after 10PM</h4>
+            <p class="text-slate-600 text-sm font-normal text-slate-500">Please keep noise to a minimum for a restful
+              night.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-accent">restaurant</span>
+          <div>
+            <h4 class="text-primary font-bold">Outside food welcome</h4>
+            <p class="text-slate-600 text-sm font-normal text-slate-500">Feel free to bring in your favorites or order
+              from local cafes.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-accent">castle</span>
+          <div>
+            <h4 class="text-primary font-bold">Respect the heritage property</h4>
+            <p class="text-slate-600 text-sm font-normal text-slate-500">Please treat the home and furniture with care.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- EXPERIENCES -->
+  <section class="py-[80px] px-6 bg-[#FAF7F2]" id="locations-new">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h4
+          style="color: #C9A84C; font-size: 14px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px;">
+          FIND US</h4>
+        <h2
+          style="font-family: 'Cormorant Garamond', serif; color: #1B3D2F; font-size: 52px; font-weight: 700; margin-bottom: 16px;">
+          Two Locations, One Experience</h2>
+        <p style="color: #64748b; font-size: 16px; max-width: 600px; margin: 0 auto;">Same warmth, same quality — in two
+          convenient locations across Dibrugarh.</p>
+      </div>
+
+      <!-- Location Cards -->
+      <div class="grid md:grid-cols-2 gap-[32px]">
+
+        <!-- Card 1 -->
+        <div
+          class="group bg-[#FAF7F2] rounded-[16px] overflow-hidden transition-transform duration-300 ease-out hover:-translate-y-[6px]"
+          style="border: 1px solid rgba(201,168,76,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.08);">
+          <!-- Image Placeholder -->
+          <div class="relative w-full h-[300px] bg-[#1B3D2F] flex flex-col items-center justify-center">
+            <span class="material-symbols-outlined text-[#C9A84C] mb-2" style="font-size: 40px;">location_on</span>
+            <span class="text-[#C9A84C] font-bold text-sm tracking-widest uppercase">Photo Coming Soon</span>
+            <img src="" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+              alt="Branch 1 Location">
+          </div>
+
+          <!-- Card Body -->
+          <div class="p-[32px] bg-[#FAF7F2]">
+            <div
+              class="inline-block bg-[#C9A84C]/10 text-[#C9A84C] px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
+              BRANCH 01</div>
+            <h3
+              style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; color: #1B3D2F; margin-bottom: 8px;">
+              JC Phukan Path</h3>
+            <p style="color: #64748b; font-size: 14px; margin-bottom: 32px;">Duwarah Chuk, Dibrugarh, Assam</p>
+
+            <div class="flex gap-4">
+              <a href="https://maps.app.goo.gl/8eokGoYXcquvgpie6" target="_blank"
+                class="flex-1 bg-[#C9A84C] text-[#1B3D2F] py-3 rounded text-center font-bold text-sm tracking-widest uppercase transition-colors hover:bg-[#C9A84C]/90">
+                Get Directions
+              </a>
+              <a href="tel:+919864872229"
+                class="flex-1 border border-[#1B3D2F] text-[#1B3D2F] py-3 rounded text-center font-bold text-sm tracking-widest uppercase transition-colors hover:bg-[#1B3D2F] hover:text-[#FAF7F2]">
+                Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="group bg-[#FAF7F2] rounded-[16px] overflow-hidden transition-transform duration-300 ease-out hover:-translate-y-[6px]"
+          style="border: 1px solid rgba(201,168,76,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.08);">
+          <!-- Image Placeholder -->
+          <div class="relative w-full h-[300px] bg-[#1B3D2F] flex flex-col items-center justify-center">
+            <span class="material-symbols-outlined text-[#C9A84C] mb-2" style="font-size: 40px;">location_on</span>
+            <span class="text-[#C9A84C] font-bold text-sm tracking-widest uppercase">Photo Coming Soon</span>
+            <img src="" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+              alt="Branch 2 Location">
+          </div>
+
+          <!-- Card Body -->
+          <div class="p-[32px] bg-[#FAF7F2]">
+            <div
+              class="inline-block bg-[#C9A84C]/10 text-[#C9A84C] px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
+              BRANCH 02</div>
+            <h3
+              style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; color: #1B3D2F; margin-bottom: 8px;">
+              Hoti Hadhini Path</h3>
+            <p style="color: #64748b; font-size: 14px; margin-bottom: 32px;">Chring Chapori, Dibrugarh, Assam</p>
+
+            <div class="flex gap-4">
+              <a href="https://maps.app.goo.gl/CLptoF4o6aPzhF3Z7" target="_blank"
+                class="flex-1 bg-[#C9A84C] text-[#1B3D2F] py-3 rounded text-center font-bold text-sm tracking-widest uppercase transition-colors hover:bg-[#C9A84C]/90">
+                Get Directions
+              </a>
+              <a href="tel:+919864872229"
+                class="flex-1 border border-[#1B3D2F] text-[#1B3D2F] py-3 rounded text-center font-bold text-sm tracking-widest uppercase transition-colors hover:bg-[#1B3D2F] hover:text-[#FAF7F2]">
+                Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="py-24 px-6 bg-primary" id="experiences">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h4 class="text-accent uppercase tracking-[0.2em] text-sm font-bold mb-4">Explore</h4>
+        <h2 class="text-off-white text-4xl md:text-5xl font-bold font-bold text-5xl md:text-6xl">Beyond Your Room</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group cursor-pointer">
+          <div class="overflow-hidden rounded-lg mb-4" style="background-color: #1B3D2F;">
+            <img alt="Jagannath Mandir"
+              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+              src="gallery/jagannathmandir.jpg" />
+          </div>
+          <h3 class="text-accent text-2xl font-bold mb-2">Jagannath Mandir</h3>
+          <p class="text-off-white/70 font-light">One of Dibrugarh's most sacred temples a peaceful spiritual retreat
+            just minutes from The White House.</p>
+        </div>
+        <div class="group cursor-pointer">
+          <div class="overflow-hidden rounded-lg mb-4" style="background-color: #1B3D2F;">
+            <img alt="Dibrugarh Stadium"
+              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+              src="gallery/PLACES TO VISIT/dibrugarhstadium.jpg" />
+          </div>
+          <h3 class="text-accent text-2xl font-bold mb-2">Dibrugarh Stadium</h3>
+          <p class="text-off-white/70 font-light">The heart of sports and local events in Dibrugarh catch a game or
+            evening walk around the grounds.</p>
+        </div>
+        <div class="group cursor-pointer">
+          <div class="overflow-hidden rounded-lg mb-4" style="background-color: #1B3D2F;">
+            <img alt="Dibrugarh University"
+              class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+              src="gallery/PLACES TO VISIT/dibrugarhuniversity.jpg" />
+          </div>
+          <h3 class="text-accent text-2xl font-bold mb-2">Dibrugarh University</h3>
+          <p class="text-off-white/70 font-light">One of Northeast India's most prestigious institutions — beautiful
+            campus worth an evening stroll.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- REVIEWS -->
+  <section class="py-24 bg-off-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-primary text-4xl md:text-5xl font-bold font-bold text-5xl md:text-6xl">What Our Guests Say</h2>
+      </div>
+    </div>
+    <div class="marquee-container relative w-full flex flex-col pt-4 pb-12">
+      <!-- Row 1 -->
+      <div class="flex gap-8 animate-marquee-left w-max">
+        <!-- Set 1 -->
+        <div class="flex gap-8">
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"The most peaceful stay I've had in
+              years. Woke up to birdsong and fresh tea every morning."</p>
+            <div>
+              <h4 class="font-bold text-primary">Priya Nath</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Guwahati, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Came for a weekend, wished I could
+              stay a month. The garden terrace is divine."</p>
+            <div>
+              <h4 class="font-bold text-primary">Arjun Hazarika</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Jorhat, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Best homestay in Dibrugarh, no
+              contest. The colonial architecture is breathtaking."</p>
+            <div>
+              <h4 class="font-bold text-primary">Ananya Das</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Silchar, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Our family of 5 stayed in the 4BHK
+              — spacious, clean, and felt like home."</p>
+            <div>
+              <h4 class="font-bold text-primary">Sunita Gogoi</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Tezpur, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"The Brown Brick room had the most
+              beautiful morning light. Slept better than ever."</p>
+            <div>
+              <h4 class="font-bold text-primary">Pooja Kalita</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Nagaon, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Every corner is Instagram-worthy.
+              But more importantly, genuinely comfortable."</p>
+            <div>
+              <h4 class="font-bold text-primary">Shreya Baruah</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Dibrugarh, Assam</p>
+            </div>
+          </div>
+        </div>
+        <!-- Set 2 (for infinite loop) -->
+        <div class="flex gap-8">
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"The most peaceful stay I've had in
+              years. Woke up to birdsong and fresh tea every morning."</p>
+            <div>
+              <h4 class="font-bold text-primary">Priya Nath</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Guwahati, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Came for a weekend, wished I could
+              stay a month. The garden terrace is divine."</p>
+            <div>
+              <h4 class="font-bold text-primary">Arjun Hazarika</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Jorhat, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Best homestay in Dibrugarh, no
+              contest. The colonial architecture is breathtaking."</p>
+            <div>
+              <h4 class="font-bold text-primary">Ananya Das</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Silchar, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Our family of 5 stayed in the 4BHK
+              — spacious, clean, and felt like home."</p>
+            <div>
+              <h4 class="font-bold text-primary">Sunita Gogoi</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Tezpur, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"The Brown Brick room had the most
+              beautiful morning light. Slept better than ever."</p>
+            <div>
+              <h4 class="font-bold text-primary">Pooja Kalita</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Nagaon, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Every corner is Instagram-worthy.
+              But more importantly, genuinely comfortable."</p>
+            <div>
+              <h4 class="font-bold text-primary">Shreya Baruah</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Dibrugarh, Assam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="flex gap-8 animate-marquee-right w-max mt-8">
+        <!-- Set 1 -->
+        <div class="flex gap-8">
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Clean, beautiful, affordable
+              luxury. Sets the standard for homestays in Assam."</p>
+            <div>
+              <h4 class="font-bold text-primary">Dipankar Dutta</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Tinsukia, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"The hosts treated us like family
+              from the moment we arrived."</p>
+            <div>
+              <h4 class="font-bold text-primary">Fatima Begum</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Guwahati, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Felt like staying at a heritage
+              home — warm, beautiful, full of character."</p>
+            <div>
+              <h4 class="font-bold text-primary">Rahul Bora</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Kolkata, West Bengal</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"A truly unique experience. You
+              don't just stay here — you live here for a while."</p>
+            <div>
+              <h4 class="font-bold text-primary">Supriya Mohapatra</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Bhubaneswar, Odisha</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"A gem hidden in plain sight.
+              Perfect for anyone looking for heritage and luxury."</p>
+            <div>
+              <h4 class="font-bold text-primary">Vikram Singh</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Delhi</p>
+            </div>
+          </div>
+        </div>
+        <!-- Set 2 (for infinite loop) -->
+        <div class="flex gap-8">
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Clean, beautiful, affordable
+              luxury. Sets the standard for homestays in Assam."</p>
+            <div>
+              <h4 class="font-bold text-primary">Dipankar Dutta</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Tinsukia, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"The hosts treated us like family
+              from the moment we arrived."</p>
+            <div>
+              <h4 class="font-bold text-primary">Fatima Begum</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Guwahati, Assam</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"Felt like staying at a heritage
+              home — warm, beautiful, full of character."</p>
+            <div>
+              <h4 class="font-bold text-primary">Rahul Bora</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Kolkata, West Bengal</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"A truly unique experience. You
+              don't just stay here — you live here for a while."</p>
+            <div>
+              <h4 class="font-bold text-primary">Supriya Mohapatra</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Bhubaneswar, Odisha</p>
+            </div>
+          </div>
+          <div class="glass-card p-10 rounded-xl bg-white/60 border border-accent/20 w-[400px] flex-shrink-0">
+            <div class="flex text-accent mb-4"><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span><span class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1">star</span></div>
+            <p class="text-primary text-lg font-display italic mb-6 leading-relaxed">"A gem hidden in plain sight.
+              Perfect for anyone looking for heritage and luxury."</p>
+            <div>
+              <h4 class="font-bold text-primary">Vikram Singh</h4>
+              <p class="text-accent uppercase text-[10px] tracking-widest font-bold">Delhi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- BOOKING CTA -->
+  <section class="relative py-24 px-6 bg-primary overflow-hidden">
+    <div class="absolute inset-0 opacity-30 bg-cover bg-center"
+      data-alt="Warm abstract golden lighting reflecting off green silk"
+      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWMuxyEDjY7o0WVbsbzW9pjQoyNin0G7w2W7NsbvPmaHOx5Pi5F2CMCwN60Z30H6yjtkh-eAfE-cwuMaSaySiP54s-KV2AbJYp5dttIuPjhI3wIPanSX6cDjFD9epr5mvFK1Cmom7UJwVLi2PcabSR4IPjWZ3ckCi5ZUc-emZw3eBwGDuq6JSj05thcBNjK8Nx78u61ghz3vlVUwW2ViaGFKLYYQL-ep9W3AWFeQH2MzbFVv1scda-jbIZj3fAiDmJ0kf_O7zw84o');">
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+      <h2 class="text-off-white text-5xl md:text-6xl font-bold mb-4 font-bold text-5xl md:text-6xl">Ready to Escape?
+      </h2>
+      <p class="text-accent text-xl mb-12 italic">Rooms fill up fast — especially on weekends.</p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a class="bg-accent text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-accent/90 transition-all flex items-center justify-center gap-2"
+          href="https://wa.me/919864872229" target="_blank">
+          <span class="material-symbols-outlined">chat</span>
+          Book on WhatsApp
+        </a>
+        <button
+          class="border-2 border-accent text-accent px-10 py-4 rounded-lg font-bold text-lg hover:bg-accent/10 transition-all flex items-center justify-center gap-2 font-bold uppercase tracking-[0.08em]">
+          <span class="material-symbols-outlined">call</span>
+          Call to Reserve
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- INSTAGRAM GALLERY -->
+  <section class="py-24 px-6 bg-white dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <h4 class="text-accent uppercase tracking-widest text-sm font-bold mb-2">@TheWhiteHouseAssam</h4>
+          <h2 class="text-primary dark:text-off-white text-4xl font-bold font-bold text-5xl md:text-6xl">Moments Shared
+          </h2>
+        </div>
+        <a class="text-primary dark:text-accent font-bold border-b-2 border-accent" href="#">FOLLOW US</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img alt="Insta 1" class="aspect-square object-cover rounded-lg"
+          data-alt="Candid shot of a guest enjoying tea on the balcony"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJyb1kkTvM7-pav6tQTxU_PcjrKDeTnoBru6QBQeJNS9HETEEL9raDnzRHsTwE2xdSi7JFsII0c13jK18tC2G2n6oGjEC1SfzmBMXZcfwSzScFZvQtx79JzJkFzhoaVSEXqNQL27aBlDr65ebqBXzQ2HhEK5khPXIEcuZOnOonYk9LfW7f4VKp8XuQbHhCMOO_o3PEVwNcD_Qi1T1UeyecQ47Ldp_zB5hbZm-ebWNkqXT67cNHGNdHEERP6-GjU2GVG_xHmJQfiQY" />
+        <img alt="Insta 2" class="aspect-square object-cover rounded-lg"
+          data-alt="Close up of blooming flowers in the homestay garden"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhAZ34fXtGBfExep5NkzzJ2u5NY0Fciy9M1sgv3lN7G2jgSa6TjLbzl0AgZfLv7Nypi6wTvhE6pSv6mrBmNvNkUbiliWPYd6l3c-jbVdEiQbc4U12a_DkT9_JzuTMe2K37bUeqCyFx4hk_WbbZvWOaVIk2RBMU7ZPetLlYJ1veRtR36LckhAqyQ-nhbdXxhktQBsNOCPlBDgD6009LajIW8Blcl1fDN1z52RdRhU6IATUr_cT6t7YBan9f3OaD8Xu1vHwibYHjAV0" />
+        <img alt="Insta 3" class="aspect-square object-cover rounded-lg"
+          data-alt="Sunlight hitting the colonial architecture facade"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVHNyRNG2ZAS7jrQbQ7Xa3kzlLxy-1KVXfmGjrETffojEjHlhqogEPKl_NtICAH1eh6ZReZL54U80a9ts29rjOGWUPfT4PbirGd_VoLdTOfkUUnigTFQM4Aemm_7Z0-X4icGZEwUGcRtepay2YjNcnXkzupUwUXVNoLJWxdaLTqXyoqYZaGATzjJEh4ei2t8fgkWdmOY8USCNWCNjb7UTZ2c7Od2G4C0O7GKYeDbdXFkTpoXkkBPjy3Uh67lp4IB6HlZ3IwSB3-bE" />
+        <img alt="Insta 4" class="aspect-square object-cover rounded-lg"
+          data-alt="A beautifully set dinner table in the heritage dining hall"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0bjmDSytJPlac4kQxo7dWyclSVL7le6ugKuTX--oGQHwwqdmwnwyJpsa1tTPieDYZmJY9At2Nh-au_dV64FF6_RzqypLXdcv2ogHMJtTqXX2TvCybeui_KM_I6uGq-PNAqs5X5UEezobqezKiXF7wx-NKpW5Ytdq9pvATsFDw3cpEb2dg_CYL6lrvhvvBON8ktsJ8ojQ_2ElSvUCJoEBYufV_ZEiTEFiN-HWGUZ1yKzPuBuW5lsJHYPZQZ7ULGbxDhMT5O3G8-2s" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER'S MESSAGE -->
+  <section class="relative min-h-screen flex items-center justify-center p-[60px]"
+    style="padding: 120px 60px; background-color: #1B3D2F; overflow: hidden;" id="founder-message">
+    <!-- Grid Pattern Overlay -->
+    <div class="absolute inset-0 pointer-events-none"
+      style="opacity: 0.08; background-size: 40px 40px; background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px);">
+    </div>
+
+    <div class="relative max-w-[900px] w-full flex flex-col items-center text-center z-10">
+      <!-- Quotation Mark -->
+      <div
+        style="font-family: 'Cormorant Garamond', serif; font-size: 120px; color: #C9A84C; opacity: 0.4; line-height: 1; height: 50px; margin-bottom: 20px;"
+        aria-hidden="true">&ldquo;</div>
+
+      <!-- Quote Text -->
+      <p id="founder-quote-text"
+        style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #ffffff; line-height: 1.4; margin-bottom: 60px;">
+        The White House was never just a business idea. It was a dream to give every guest — whether from Dibrugarh or
+        Delhi, Guwahati or Germany — a place that <span style="color: #C9A84C;">feels like home</span>. A place where
+        Assamese warmth is not a service, but a way of life. When you stay with us, you are not a guest. <span
+          style="color: #C9A84C;">You are family.</span>
+      </p>
+      <script>
+          (function () {
+            const el = document.getElementById('founder-quote-text');
+            if (!el) return;
+            function wrap(node) {
+              if (node.nodeType === 3) {
+                const parts = node.nodeValue.split(/(\s+)/);
+                const frag = document.createDocumentFragment();
+                parts.forEach(p => {
+                  if (p.trim()) {
+                    const s = document.createElement('span');
+                    s.className = 'founder-word inline-block opacity-0 translate-x-[15px]';
+                    s.innerText = p;
+                    frag.appendChild(s);
+                  } else {
+                    frag.appendChild(document.createTextNode(p));
+                  }
+                });
+                node.parentNode.replaceChild(frag, node);
+              } else if (node.nodeType === 1) {
+                Array.from(node.childNodes).forEach(wrap);
+              }
+            }
+            Array.from(el.childNodes).forEach(wrap);
+          })();
+      </script>
+
+      <!-- Founder Row -->
+      <div id="founder-row" class="flex items-center gap-6 text-left opacity-0 translate-y-[30px]">
+        <img src="gallery/owner image/75cc9911-5616-424f-ab66-703b71eec486.jpg" alt="Madhurjya Gogoi"
+          style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid #C9A84C;"
+          class="flex-shrink-0">
+        <div class="flex flex-col">
+          <span style="color: #ffffff; font-weight: 700; font-size: 18px; margin-bottom: 4px;">Madhurjya Gogoi</span>
+          <span style="color: #C9A84C; font-size: 13px; letter-spacing: 0.05em;">Founder, The White House &middot;
+            Entrepreneur &middot; Northeast Healthcare &amp; Hospital</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary pt-20 pb-10 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 border-b border-accent/20 pb-16 mb-10">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-2 mb-6">
+          <img alt="Footer Logo" class="size-8" data-alt="The White House logo in gold"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUPz_oAwcJIzmfd36cgdcAGBf7kJA_L-H2-jpgDXOx9AmHz4MPCH8ZFZD16MbrzEQmp2DfXMP9_OLX1K7NfCrlfmCNz4KojTP49bCO9bYURIDsV59VWjC2DfqhvvMXQE7H02ahEDD43VpNiOn_hmOJsaQSBieEXp3hODbwR56I7sUrdW6gzW1l3nWEDIwaQLbK4orMAtYR2Q34jOKQxw2ewtS_nxPbmq62_z_MWH0I-K3MzqnlCgdAmj_hsYIjL2jhBViQ0AkYWTE" />
+          <h3 class="text-accent text-xl font-bold text-2xl font-bold">The White House</h3>
+        </div>
+        <p class="text-off-white/60 text-sm leading-relaxed mb-6">Experience the timeless charm of Assam in our boutique
+          heritage homestay.</p>
+        <div class="flex gap-4">
+          <a class="text-accent hover:text-off-white transition-colors" href="#"><span
+              class="material-symbols-outlined">social_leaderboard</span></a>
+          <a class="text-accent hover:text-off-white transition-colors" href="#"><span
+              class="material-symbols-outlined">camera</span></a>
+          <a class="text-accent hover:text-off-white transition-colors" href="#"><span
+              class="material-symbols-outlined">alternate_email</span></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-accent font-bold text-xs uppercase tracking-widest mb-6">Quick Links</h4>
+        <ul class="space-y-4 text-off-white/60 text-sm">
+          <li><a class="hover:text-accent transition-colors" href="#">Our Rooms</a></li>
+          <li><span class="material-symbols-outlined text-xs">call</span> +91 98648 72229</li>
+          <li><span class="material-symbols-outlined text-xs">mail</span> thewhitehousedibrugarh@gmail.com</li>
+          <li><a class="hover:text-accent transition-colors" href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-accent font-bold text-xs uppercase tracking-widest mb-6">Contact</h4>
+        <ul class="space-y-4 text-off-white/60 text-sm">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">location_on</span>
+            Dibrugarh, Assam, India</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">call</span> +91 98648
+            72229</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span>
+            thewhitehousedibrugarh@gmail.com</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-accent font-bold text-xs uppercase tracking-widest mb-6">Newsletter</h4>
+        <p class="text-off-white/60 text-sm mb-4">Join our list for exclusive updates and offers.</p>
+        <form class="flex">
+          <input
+            class="bg-white/10 border-none text-off-white px-4 py-2 w-full focus:ring-1 focus:ring-accent rounded-l"
+            placeholder="Email Address" type="email" />
+          <button
+            class="bg-accent text-primary px-4 py-2 rounded-r font-bold font-bold uppercase tracking-[0.08em]">JOIN</button>
+        </form>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto flex flex-col md:row-row justify-between items-center text-off-white/40 text-xs">
+      <p>© 2025 The White House Homestay. All rights reserved.</p>
+      <div class="flex gap-6 mt-4 md:mt-0">
+        <a class="hover:text-off-white transition-colors" href="#">Privacy Policy</a>
+        <a class="hover:text-off-white transition-colors" href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Booking Modal (Hidden by default, simplified for design) -->
+  <div class="fixed inset-0 z-[100] hidden items-center justify-center p-4" id="bookingModal">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+    <div class="relative glass-panel p-8 rounded-xl w-full max-w-lg">
+      <button class="absolute top-4 right-4 text-off-white font-bold uppercase tracking-[0.08em]"><span
+          class="material-symbols-outlined">close</span></button>
+      <h2 class="text-3xl text-accent font-bold mb-6">Check Availability</h2>
+      <form class="space-y-4">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-off-white text-xs mb-1 uppercase tracking-widest">Check-in</label>
+            <input class="w-full bg-white/10 border border-white/20 rounded-lg text-off-white p-3" type="date" />
+          </div>
+          <div>
+            <label class="block text-off-white text-xs mb-1 uppercase tracking-widest">Check-out</label>
+            <input class="w-full bg-white/10 border border-white/20 rounded-lg text-off-white p-3" type="date" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-off-white text-xs mb-1 uppercase tracking-widest">Guests</label>
+          <select class="w-full bg-white/10 border border-white/20 rounded-lg text-off-white p-3 appearance-none">
+            <option class="text-primary">1 Guest</option>
+            <option class="text-primary" selected="">2 Guests</option>
+            <option class="text-primary">3 Guests</option>
+            <option class="text-primary">4+ Guests</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-off-white text-xs mb-1 uppercase tracking-widest">Room Type</label>
+          <select class="w-full bg-white/10 border border-white/20 rounded-lg text-off-white p-3 appearance-none">
+            <option class="text-primary">The Heritage Suite</option>
+            <option class="text-primary">The Garden Bloom</option>
+            <option class="text-primary">The Quiet Nook</option>
+          </select>
+        </div>
+        <div class="pt-4 space-y-3">
+          <a class="w-full bg-accent text-primary py-4 rounded font-bold hover:scale-[1.02] transition-transform flex items-center justify-center gap-2"
+            href="https://wa.me/919864872229" target="_blank">
+            <span class="material-symbols-outlined text-sm">chat</span>
+            Continue on WhatsApp
+          </a>
+          <button
+            class="w-full border-2 border-accent text-accent py-4 rounded font-bold hover:bg-accent/10 transition-colors font-bold uppercase tracking-[0.08em]">
+            Call Reservations
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Stagger letters for headings (Excluding specific bulk-fade headings)
+      document.querySelectorAll('h2:not(#about-heading)').forEach(h2 => {
+        const text = h2.innerText;
+        h2.innerHTML = text.split('').map(char => `<span class='inline-block char'>${char === ' ' ? '&nbsp;' : char}</span>`).join('');
+        gsap.from(h2.querySelectorAll('.char'), {
+          scrollTrigger: { trigger: h2, start: 'top 85%' },
+          y: 20, opacity: 0, stagger: 0.04, duration: 0.6, ease: 'power2.out'
+        });
+      });
+
+      // Simple bulk fade-in for specific headings
+      gsap.from('#about-heading', {
+        scrollTrigger: { trigger: '#about-heading', start: 'top 85%' },
+        y: 30, opacity: 0, duration: 0.8, ease: 'power2.out'
+      });
+
+      // Image slide-in
+      document.querySelectorAll('section:not(#founder-message) img').forEach((img, i) => {
+        const direction = i % 2 === 0 ? -50 : 50;
+        gsap.from(img, {
+          scrollTrigger: { trigger: img, start: 'top 85%' },
+          x: direction, opacity: 0, duration: 0.8, ease: 'power2.out'
+        });
+      });
+
+      // Card fade-up stagger
+      const cardGrids = ['#amenities .grid', 'section.bg-off-white .grid-cols-1.md\\:grid-cols-3'];
+      cardGrids.forEach(selector => {
+        const grid = document.querySelector(selector);
+        if (grid) {
+          gsap.from(grid.children, {
+            scrollTrigger: { trigger: grid, start: 'top 85%' },
+            y: 40, opacity: 0, stagger: 0.15, duration: 0.6, ease: 'power2.out'
+          });
+        }
+      });
+
+      // Founder Message Animation
+      const founderWords = document.querySelectorAll('.founder-word');
+      if (founderWords.length > 0) {
+        const tlFounder = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#founder-message',
+            start: 'top 50%'
+          }
+        });
+        tlFounder.to(founderWords, {
+          opacity: 1,
+          x: 0,
+          stagger: 0.05,
+          duration: 0.8,
+          ease: 'power2.out'
+        }).to('#founder-row', {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power2.out'
+        }, "-=0.2");
+      }
+
+      // Stats count-up (Commented out/removed as requested by user to preserve static format)
+      /* 
+      const statsSection = document.querySelector('.bg-primary.py-12');
+      if (statsSection) {
+        ...
+      } 
+      */
+    });
+  </script>
+  <!-- Carousel Script -->
+  <script>
+    function moveCarousel(e, btn, dir) {
+      e.stopPropagation();
+      e.preventDefault();
+      const card = btn.closest('.group');
+      const inner = card.querySelector('.carousel-inner');
+      const dots = card.querySelectorAll('.dot');
+      let idx = parseInt(card.getAttribute('data-index') || '0');
+      idx += dir;
+      if (idx < 0) idx = 2;
+      if (idx > 2) idx = 0;
+      card.setAttribute('data-index', idx);
+      inner.style.transform = `translateX(-${idx * 100}%)`;
+      dots.forEach((d, i) => {
+        d.classList.toggle('bg-[#C9A84C]', i === idx);
+        d.classList.toggle('bg-white/50', i !== idx);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.group[data-carousel="true"]').forEach(card => {
+        let startX = 0;
+        card.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+        card.addEventListener('touchend', e => {
+          let endX = e.changedTouches[0].clientX;
+          if (startX - endX > 30) moveCarousel(e, card.querySelector('.next-btn'), 1);
+          else if (endX - startX > 30) moveCarousel(e, card.querySelector('.prev-btn'), -1);
+        }, { passive: true });
+      });
+    });
+  </script>
+</body>
+
+</html>
