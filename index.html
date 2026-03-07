@@ -479,6 +479,14 @@
         text-align: center !important;
       }
 
+      .founder-section *,
+      [class*="founder"] *,
+      [class*="quote-section"] * {
+        word-spacing: normal !important;
+        letter-spacing: normal !important;
+        text-align: center !important;
+      }
+
       .founder-row,
       [class*="founder"] .profile,
       [class*="founder-info"] {
@@ -1856,38 +1864,13 @@
 
       <!-- Quote Text -->
       <p id="founder-quote-text" class="founder-quote quote-text"
-        style="font-size: 18px; line-height: 1.7; text-align: center; display: block; word-spacing: normal; letter-spacing: normal; white-space: normal; font-family: 'Cormorant Garamond', serif; font-weight: 700; color: #ffffff; margin-bottom: 60px;">
+        style="font-size:18px;line-height:1.7;text-align:center;display:block;word-spacing:0;letter-spacing:0;white-space:normal;max-width:600px;margin:0 auto; font-family: 'Cormorant Garamond', serif; font-weight: 700; color: #ffffff;">
         The White House was never just a business idea. It was a dream to give every guest whether from Dibrugarh or
         Delhi, Guwahati or Germany a place that <span style="color: #C9A84C;">feels like home</span>. A place where
         Assamese warmth is not a service, but a way of life. When you stay with us, you are not a guest. <span
           style="color: #C9A84C;">You are family.</span>
       </p>
-      <script>
-          (function () {
-            const el = document.getElementById('founder-quote-text');
-            if (!el) return;
-            function wrap(node) {
-              if (node.nodeType === 3) {
-                const parts = node.nodeValue.split(/(\s+)/);
-                const frag = document.createDocumentFragment();
-                parts.forEach(p => {
-                  if (p.trim()) {
-                    const s = document.createElement('span');
-                    s.className = 'founder-word inline-block opacity-0 translate-x-[15px]';
-                    s.innerText = p;
-                    frag.appendChild(s);
-                  } else {
-                    frag.appendChild(document.createTextNode(p));
-                  }
-                });
-                node.parentNode.replaceChild(frag, node);
-              } else if (node.nodeType === 1) {
-                Array.from(node.childNodes).forEach(wrap);
-              }
-            }
-            Array.from(el.childNodes).forEach(wrap);
-          })();
-      </script>
+
 
       <!-- Founder Row -->
       <div id="founder-row" class="founder-row flex items-center gap-6 text-left opacity-0 translate-y-[30px]">
@@ -2063,11 +2046,10 @@
             start: 'top 50%'
           }
         });
-        tlFounder.to(founderWords, {
+        tlFounder.to('#founder-quote-text', {
           opacity: 1,
-          x: 0,
-          stagger: 0.05,
-          duration: 0.8,
+          y: 0,
+          duration: 1.2,
           ease: 'power2.out'
         }).to('#founder-row', {
           opacity: 1,
