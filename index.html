@@ -603,6 +603,19 @@
         display: none !important;
       }
     }
+
+    .founder-section,
+    [class*="founder"] {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .founder-section.visible,
+    [class*="founder"].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -1873,15 +1886,13 @@
 
 
       <!-- Founder Row -->
-      <div id="founder-row" class="founder-row flex items-center gap-6 text-left opacity-0 translate-y-[30px]">
+      <div style="display:flex;align-items:center;gap:16px;justify-content:center;margin-top:32px;">
         <img src="gallery/owner image/75cc9911-5616-424f-ab66-703b71eec486.jpg" alt="Madhurjya Gogoi"
-          style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid #C9A84C;"
-          class="flex-shrink-0">
-        <div class="flex flex-col">
-          <h3 style="color: #ffffff; font-weight: 700; font-size: 18px; margin-bottom: 4px;">Madhurjya Gogoi</h3>
-          <p class="role" style="color: #C9A84C; font-size: 13px; letter-spacing: 0.05em;">Founder, The White House
-            &middot;
-            Entrepreneur &middot; Northeast Healthcare &amp; Hospital</p>
+          style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #C9A84C;flex-shrink:0;">
+        <div style="text-align:left;">
+          <h3 style="color:white;font-size:16px;font-weight:700;margin:0;">Madhurjya Gogoi</h3>
+          <p style="color:#C9A84C;font-size:12px;margin:4px 0 0 0;line-height:1.5;">Founder, The White House &middot;
+            Entrepreneur &middot; Northeast Healthcare & Hospital</p>
         </div>
       </div>
     </div>
@@ -2037,27 +2048,7 @@
         }
       });
 
-      // Founder Message Animation
-      const founderWords = document.querySelectorAll('.founder-word');
-      if (founderWords.length > 0) {
-        const tlFounder = gsap.timeline({
-          scrollTrigger: {
-            trigger: '#founder-message',
-            start: 'top 50%'
-          }
-        });
-        tlFounder.to('#founder-quote-text', {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          ease: 'power2.out'
-        }).to('#founder-row', {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: 'power2.out'
-        }, "-=0.2");
-      }
+
 
       // Stats count-up (Commented out/removed as requested by user to preserve static format)
       /* 
@@ -2099,6 +2090,15 @@
         }, { passive: true });
       });
     });
+  </script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) el.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.founder-section, [class*="founder"]').forEach(el => observer.observe(el));
   </script>
 </body>
 
