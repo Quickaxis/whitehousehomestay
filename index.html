@@ -370,14 +370,33 @@
       }
 
       /* REVIEWS */
-      .reviews-track,
-      .marquee-track {
-        gap: 16px !important;
+      .reviews-section,
+      [class*="reviews"],
+      [class*="testimonial"] {
+        overflow: hidden !important;
       }
 
-      .review-card {
-        min-width: 280px !important;
-        max-width: 85vw !important;
+      .reviews-grid,
+      .reviews-track,
+      .marquee-track,
+      [class*="reviews"] .grid,
+      [class*="marquee"] {
+        display: flex !important;
+        flex-direction: column !important;
+        animation: none !important;
+        gap: 16px !important;
+        padding: 0 20px !important;
+        overflow: hidden !important;
+        width: 100% !important;
+      }
+
+      .review-card,
+      [class*="review-card"] {
+        width: 100% !important;
+        min-width: unset !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 20px !important;
       }
 
       /* INSTAGRAM / MOMENTS */
@@ -1330,7 +1349,9 @@
   <section class="py-24 bg-off-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-primary text-4xl md:text-5xl font-bold font-bold text-5xl md:text-6xl">What Our Guests Say</h2>
+        <h2 class="text-primary text-4xl md:text-5xl font-bold font-bold text-5xl md:text-6xl"
+          style="font-size: clamp(22px, 5.5vw, 42px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          What Our Guests Say</h2>
       </div>
     </div>
     <div class="marquee-container relative w-full flex flex-col pt-4 pb-12">
