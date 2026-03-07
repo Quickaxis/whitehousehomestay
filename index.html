@@ -128,15 +128,33 @@
 
       /* STATS BAR */
       .stats-bar,
-      .stats-grid {
+      .stats-section,
+      [class*="stats"] {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         gap: 0 !important;
+        padding: 0 !important;
       }
 
-      .stat-item {
+      .stat-item,
+      [class*="stat-"] {
+        padding: 20px 12px !important;
+        text-align: center !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+      }
+
+      .stat-item h3,
+      .stat-number,
+      [class*="stat"] h3 {
         font-size: 28px !important;
-        padding: 20px 10px !important;
+      }
+
+      .stat-item p,
+      .stat-label,
+      [class*="stat"] p {
+        font-size: 10px !important;
+        letter-spacing: 0.08em !important;
       }
 
       .stat-divider {
