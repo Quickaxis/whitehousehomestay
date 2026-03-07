@@ -102,27 +102,6 @@
 
     @media (max-width: 768px) {
 
-      /* NAVBAR */
-      nav,
-      header {
-        padding: 10px 16px !important;
-      }
-
-      .nav-logo-text,
-      .navbar-brand {
-        font-size: 14px !important;
-      }
-
-      .nav-links {
-        display: none !important;
-      }
-
-      .book-now-btn,
-      .btn-book {
-        font-size: 12px !important;
-        padding: 8px 14px !important;
-        white-space: nowrap !important;
-      }
 
       /* HERO */
       .hero h1,
@@ -274,6 +253,77 @@
         overflow-wrap: break-word !important;
       }
     }
+
+    .pill-nav {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: fit-content;
+      max-width: 95vw;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      z-index: 1000;
+      white-space: nowrap;
+    }
+
+    .pill-nav-text {
+      color: #C9A84C;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+    }
+
+    .pill-nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .pill-nav-links a {
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      opacity: 0.9;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      text-transform: uppercase;
+    }
+
+    .pill-nav-links a:hover {
+      opacity: 1;
+    }
+
+    .pill-nav-btn {
+      background: #C9A84C;
+      color: #1B3D2F;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .pill-nav {
+        padding: 8px 16px;
+        gap: 16px;
+      }
+
+      .pill-nav-links {
+        display: none !important;
+      }
+    }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -281,30 +331,18 @@
 
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
   <!-- Header / Nav -->
-  <header class="fixed top-0 left-0 w-full bg-primary py-4 px-6" style="z-index: 1000;">
-    <div class="w-full flex items-center justify-between px-4 lg:px-12">
-      <div style="display: flex; align-items: center; justify-content: flex-start; gap: 12px; background: transparent;">
-        <img src="gallery/logo/logo.png" alt="The White House Homestay"
-          style="height: 64px; width: auto; background: transparent; border: none; object-fit: contain;">
-        <span
-          style="font-family: 'Cormorant Garamond', serif; color: #C9A84C; font-size: 24px; font-weight: 700; text-transform: uppercase;">White
-          House</span>
-      </div>
-      <nav class="hidden md:flex items-center gap-8 text-white uppercase"
-        style="font-weight: 600; font-size: 13px; letter-spacing: 0.12em;">
-        <a class="transition-colors duration-200 hover:text-accent" href="#about">About</a>
-        <a class="transition-colors duration-200 hover:text-accent" href="#rooms">Rooms</a>
-        <a class="transition-colors duration-200 hover:text-accent" href="#amenities">Amenities</a>
-        <a class="transition-colors duration-200 hover:text-accent" href="#experiences">Experiences</a>
-      </nav>
-      <button class="bg-accent text-primary transition-all hover:bg-accent/90"
-        style="font-weight: 700; letter-spacing: 0.1em; padding: 12px 24px; border-radius: 4px;">
-        BOOK NOW
-      </button>
-    </div>
+  <header class="pill-nav">
+    <div class="pill-nav-text">WHITE HOUSE</div>
+    <nav class="pill-nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#rooms">ROOMS</a>
+      <a href="#amenities">AMENITIES</a>
+      <a href="#experiences">EXPERIENCES</a>
+    </nav>
+    <button class="pill-nav-btn">BOOK NOW</button>
   </header>
   <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <section class="relative h-screen flex items-center justify-center overflow-hidden" style="padding-top: 90px;">
     <div class="absolute inset-0 bg-cover bg-center" data-alt="Luxury colonial style homestay exterior at dusk"
       style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-ITNGyq44za89Ks5t-SLmW_Im79DNYeVJcV-wID6f8Bu-qzLD23KXbVrF_UB3fnNU5RLTwJkUul4hj2HmTnev1ZgE03hZriamUKgZNI1xx3_IVc-A_8r3R2dPOdNAMKZcPzSv9BsfZRJ-NLrjj0JK-9Z2dw4RNWfaefYR9_wkjrf5RUNtOjwAYH43B8Jh1BnPNmS8OF8pQAJoyzZ8F-NO30Wb17AXzhOtWCBSBjd898fwF86mklWYU-FGThoyaLqfUgThSz2YqBI');">
     </div>
