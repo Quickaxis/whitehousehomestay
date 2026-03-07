@@ -109,6 +109,68 @@
       box-shadow: 0 0 16px rgba(201, 168, 76, 0.2);
     }
 
+    /* ROOM CARDS CAROUSEL FIX */
+    .room-card,
+    [data-carousel="true"] {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .room-card .book-overlay,
+    .room-card .book-popup,
+    .room-card .book-btn-overlay,
+    .carousel .book-now,
+    [class*="room-card"] a[class*="book"],
+    [class*="room-card"] button[class*="book"],
+    [data-carousel="true"] a[href*="wa.me"] {
+      display: none !important;
+    }
+
+    .prev-btn,
+    .next-btn,
+    .carousel-btn,
+    .slider-btn,
+    .carousel-arrow,
+    [class*="carousel"] button,
+    [class*="slider"] button {
+      position: absolute !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      width: 28px !important;
+      height: 28px !important;
+      background: rgba(0, 0, 0, 0.45) !important;
+      border: none !important;
+      border-radius: 50% !important;
+      color: white !important;
+      font-size: 14px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      z-index: 10 !important;
+      cursor: pointer !important;
+      opacity: 0.8 !important;
+    }
+
+    .prev-btn:hover,
+    .next-btn:hover {
+      opacity: 1 !important;
+      background: rgba(0, 0, 0, 0.65) !important;
+    }
+
+    .prev-btn,
+    .carousel-btn.prev,
+    .slider-btn.prev,
+    [class*="prev"] {
+      left: 8px !important;
+    }
+
+    .next-btn,
+    .carousel-btn.next,
+    .slider-btn.next,
+    [class*="next"] {
+      right: 8px !important;
+    }
+
     @media (max-width: 768px) {
 
 
