@@ -416,23 +416,31 @@
   </header>
   <!-- Hero Section -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden" style="padding-top: 90px;">
-    <!-- 
-      HERO VIDEO: save as hero-video.mp4 in same folder
-    -->
-    <video id="hero-video" autoplay muted loop playsinline style="
-        position:absolute;
-        inset:0;
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        object-position:center;
-        z-index:0;
-      ">
-      <source src="hero-video.mp4" type="video/mp4">
-    </video>
-
-    <!-- Subtle dark overlay -->
-    <div class="absolute inset-0 bg-black/25" style="z-index: 1;"></div>
+    <div class="absolute inset-0 bg-cover bg-center" data-alt="Luxury colonial style homestay exterior at dusk"
+      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-ITNGyq44za89Ks5t-SLmW_Im79DNYeVJcV-wID6f8Bu-qzLD23KXbVrF_UB3fnNU5RLTwJkUul4hj2HmTnev1ZgE03hZriamUKgZNI1xx3_IVc-A_8r3R2dPOdNAMKZcPzSv9BsfZRJ-NLrjj0JK-9Z2dw4RNWfaefYR9_wkjrf5RUNtOjwAYH43B8Jh1BnPNmS8OF8pQAJoyzZ8F-NO30Wb17AXzhOtWCBSBjd898fwF86mklWYU-FGThoyaLqfUgThSz2YqBI');">
+    </div>
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 glass-panel p-8 md:p-16 rounded-xl max-w-4xl text-center mx-4">
+      <h1 style="margin-bottom: 24px; line-height: 1.2;">
+        <span
+          style="display: block; font-family: 'Cormorant Garamond', serif; color: #FFFFFF; font-size: 56px; font-weight: 400; font-style: normal; margin-bottom: 8px;">A
+          Home Away</span>
+        <span
+          style="font-family: 'Cormorant Garamond', serif; color: #C9A84C; font-size: 72px; font-weight: 700; font-style: italic;">From
+          Home.</span>
+      </h1>
+      <p class="text-off-white/80 text-lg md:text-xl max-w-2xl mx-auto font-light mb-10 leading-relaxed">
+        Experience heritage and curated comfort in our private sanctuary located in the tea capital of India, Dibrugarh.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-accent text-primary px-8 py-4 rounded font-bold text-lg hover:scale-105 transition-transform font-bold uppercase tracking-[0.08em]">EXPLORE
+          ROOMS</button>
+        <button
+          class="border-2 border-off-white text-off-white px-8 py-4 rounded font-bold text-lg hover:bg-off-white/10 transition-colors font-bold uppercase tracking-[0.08em]">OUR
+          STORY</button>
+      </div>
+    </div>
   </section>
   <!-- STATS BAR -->
   <section class="bg-primary px-6 stats-bar" style="padding-top: 32px; padding-bottom: 32px;">
