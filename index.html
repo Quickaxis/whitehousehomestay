@@ -611,7 +611,7 @@
       letter-spacing: 0.08em;
       opacity: 0.9;
       text-decoration: none;
-      transition: opacity 0.8s;
+      transition: opacity 0.3s;
       text-transform: uppercase;
     }
 
@@ -2302,14 +2302,14 @@
         h2.innerHTML = text.split('').map(char => `<span class='inline-block char'>${char === ' ' ? '&nbsp;' : char}</span>`).join('');
         gsap.from(h2.querySelectorAll('.char'), {
           scrollTrigger: { trigger: h2, start: 'top 85%' },
-          y: 20, opacity: 0, stagger: 0.08, duration: 0.8, ease: 'power2.out'
+          y: 20, opacity: 0, stagger: 0.03, duration: 0.4, ease: 'power2.out'
         });
       });
 
       // Simple bulk fade-in for specific headings
       gsap.from('#about-heading', {
         scrollTrigger: { trigger: '#about-heading', start: 'top 85%' },
-        y: 30, opacity: 0, duration: 0.8, ease: 'power2.out'
+        y: 30, opacity: 0, duration: 0.4, ease: 'power2.out'
       });
 
       // Image slide-in
