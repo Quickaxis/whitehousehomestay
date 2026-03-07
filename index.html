@@ -130,35 +130,61 @@
       .stats-bar,
       .stats-section,
       [class*="stats"] {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
+        display: flex !important;
+        overflow: hidden !important;
+        padding: 12px 0 !important;
+        background: #1B3D2F !important;
+        border-top: 1px solid rgba(201, 168, 76, 0.2) !important;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.2) !important;
+        grid-template-columns: unset !important;
+      }
+
+      .stats-inner-track {
+        display: flex !important;
         gap: 0 !important;
-        padding: 0 !important;
+        animation: statsTicker 12s linear infinite !important;
+        white-space: nowrap !important;
+        width: max-content !important;
       }
 
       .stat-item,
       [class*="stat-"] {
-        padding: 20px 12px !important;
-        text-align: center !important;
-        border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        padding: 0 20px !important;
+        border: none !important;
+        border-right: 1px solid rgba(201, 168, 76, 0.3) !important;
+        border-bottom: none !important;
       }
 
       .stat-item h3,
-      .stat-number,
-      [class*="stat"] h3 {
-        font-size: 28px !important;
+      .stat-number {
+        font-size: 14px !important;
+        color: #C9A84C !important;
+        margin: 0 !important;
       }
 
       .stat-item p,
-      .stat-label,
-      [class*="stat"] p {
+      .stat-label {
         font-size: 10px !important;
-        letter-spacing: 0.08em !important;
+        color: rgba(255, 255, 255, 0.6) !important;
+        margin: 0 !important;
+        letter-spacing: 0.06em !important;
       }
 
       .stat-divider {
         display: none !important;
+      }
+
+      @keyframes statsTicker {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
       }
 
       /* ABOUT SECTION */
@@ -388,43 +414,80 @@
     </div>
   </section>
   <!-- STATS BAR -->
-  <section class="bg-primary px-6" style="padding-top: 32px; padding-bottom: 32px;">
+  <section class="bg-primary px-6 stats-bar" style="padding-top: 32px; padding-bottom: 32px;">
     <div
-      class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center divide-y md:divide-y-0 md:divide-x"
+      class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center divide-y md:divide-y-0 md:divide-x stats-inner-track"
       style="border-color: rgba(201,168,76,0.3);">
 
-      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0">
-        <span
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0 stat-item">
+        <span class="stat-number"
           style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">6
           Rooms</span>
-        <span
+        <span class="stat-label"
           style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Boutique
           Stays</span>
       </div>
 
-      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0">
-        <span
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0 stat-item">
+        <span class="stat-number"
           style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">Est.
           2025</span>
-        <span
+        <span class="stat-label"
           style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Modern
           Heritage</span>
       </div>
 
-      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0">
-        <span
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0 stat-item">
+        <span class="stat-number"
           style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">4.9★
           Rating</span>
-        <span
+        <span class="stat-label"
           style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Guest
           Excellence</span>
       </div>
 
-      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0">
-        <span
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0 stat-item">
+        <span class="stat-number"
           style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">Dibrugarh,
           Assam</span>
-        <span
+        <span class="stat-label"
+          style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Tea
+          Capital</span>
+      </div>
+
+      <!-- Duplicate for looping -->
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0 stat-item">
+        <span class="stat-number"
+          style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">6
+          Rooms</span>
+        <span class="stat-label"
+          style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Boutique
+          Stays</span>
+      </div>
+
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0 stat-item">
+        <span class="stat-number"
+          style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">Est.
+          2025</span>
+        <span class="stat-label"
+          style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Modern
+          Heritage</span>
+      </div>
+
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0 stat-item">
+        <span class="stat-number"
+          style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">4.9★
+          Rating</span>
+        <span class="stat-label"
+          style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Guest
+          Excellence</span>
+      </div>
+
+      <div class="flex flex-col gap-1 flex-1 py-4 md:py-0 stat-item">
+        <span class="stat-number"
+          style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #C9A84C; letter-spacing: 0.02em;">Dibrugarh,
+          Assam</span>
+        <span class="stat-label"
           style="font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6);">Tea
           Capital</span>
       </div>
