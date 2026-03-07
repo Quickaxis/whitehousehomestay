@@ -460,15 +460,49 @@
       }
 
       /* FOUNDER QUOTE */
-      .founder-quote,
-      .quote-text {
-        font-size: 22px !important;
-        line-height: 1.5 !important;
-        padding: 24px 20px !important;
+      .founder-section,
+      [class*="founder"],
+      [class*="quote-section"] {
+        padding: 40px 24px !important;
       }
 
-      .founder-section {
-        padding: 48px 20px !important;
+      .founder-quote,
+      .quote-text,
+      [class*="founder"] p,
+      [class*="founder"] blockquote,
+      [class*="quote"] p {
+        font-size: 18px !important;
+        line-height: 1.7 !important;
+        text-align: center !important;
+        letter-spacing: 0 !important;
+      }
+
+      .founder-row,
+      [class*="founder"] .profile,
+      [class*="founder-info"] {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 12px !important;
+        justify-content: center !important;
+        margin-top: 24px !important;
+      }
+
+      .founder-row img,
+      [class*="founder"] img {
+        width: 56px !important;
+        height: 56px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .founder-row h3,
+      [class*="founder"] h3 {
+        font-size: 15px !important;
+      }
+
+      .founder-row p,
+      [class*="founder"] .role {
+        font-size: 12px !important;
+        line-height: 1.4 !important;
       }
 
       /* FOOTER */
@@ -1805,7 +1839,7 @@
   </section>
 
   <!-- FOUNDER'S MESSAGE -->
-  <section class="relative min-h-screen flex items-center justify-center p-[60px]"
+  <section class="relative min-h-screen flex items-center justify-center p-[60px] founder-section"
     style="padding: 120px 60px; background-color: #1B3D2F; overflow: hidden;" id="founder-message">
     <!-- Grid Pattern Overlay -->
     <div class="absolute inset-0 pointer-events-none"
@@ -1819,10 +1853,10 @@
         aria-hidden="true">&ldquo;</div>
 
       <!-- Quote Text -->
-      <p id="founder-quote-text"
+      <p id="founder-quote-text" class="founder-quote quote-text"
         style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #ffffff; line-height: 1.4; margin-bottom: 60px;">
-        The White House was never just a business idea. It was a dream to give every guest — whether from Dibrugarh or
-        Delhi, Guwahati or Germany — a place that <span style="color: #C9A84C;">feels like home</span>. A place where
+        The White House was never just a business idea. It was a dream to give every guest whether from Dibrugarh or
+        Delhi, Guwahati or Germany a place that <span style="color: #C9A84C;">feels like home</span>. A place where
         Assamese warmth is not a service, but a way of life. When you stay with us, you are not a guest. <span
           style="color: #C9A84C;">You are family.</span>
       </p>
@@ -1854,14 +1888,15 @@
       </script>
 
       <!-- Founder Row -->
-      <div id="founder-row" class="flex items-center gap-6 text-left opacity-0 translate-y-[30px]">
+      <div id="founder-row" class="founder-row flex items-center gap-6 text-left opacity-0 translate-y-[30px]">
         <img src="gallery/owner image/75cc9911-5616-424f-ab66-703b71eec486.jpg" alt="Madhurjya Gogoi"
           style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid #C9A84C;"
           class="flex-shrink-0">
         <div class="flex flex-col">
-          <span style="color: #ffffff; font-weight: 700; font-size: 18px; margin-bottom: 4px;">Madhurjya Gogoi</span>
-          <span style="color: #C9A84C; font-size: 13px; letter-spacing: 0.05em;">Founder, The White House &middot;
-            Entrepreneur &middot; Northeast Healthcare &amp; Hospital</span>
+          <h3 style="color: #ffffff; font-weight: 700; font-size: 18px; margin-bottom: 4px;">Madhurjya Gogoi</h3>
+          <p class="role" style="color: #C9A84C; font-size: 13px; letter-spacing: 0.05em;">Founder, The White House
+            &middot;
+            Entrepreneur &middot; Northeast Healthcare &amp; Hospital</p>
         </div>
       </div>
     </div>
