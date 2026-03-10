@@ -1717,6 +1717,66 @@
           style="font-size: clamp(22px, 5.5vw, 42px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
           What Our Guests Say</h2>
       </div>
+
+      <!-- Rating Summary Block -->
+      <div
+        class="max-w-[600px] mx-auto mb-16 p-8 rounded-2xl bg-[#FAF7F2]/80 border border-accent/20 shadow-sm backdrop-blur-sm">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+          <!-- Overall Score -->
+          <div class="text-center md:text-left">
+            <div class="flex flex-col items-center md:items-start">
+              <span
+                style="font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 700; color: #1B3D2F; line-height: 1;"
+                class="mb-2">4.9</span>
+              <div class="flex text-[#C9A84C] mb-2">
+                <span class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1; font-size: 24px;">star</span>
+                <span class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1; font-size: 24px;">star</span>
+                <span class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1; font-size: 24px;">star</span>
+                <span class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1; font-size: 24px;">star</span>
+                <span class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1; font-size: 24px;">star</span>
+              </div>
+              <span class="text-slate-500 text-xs font-bold uppercase tracking-widest">Overall Rating</span>
+            </div>
+          </div>
+
+          <!-- Breakdown Bars -->
+          <div class="flex-1 w-full max-w-[300px]">
+            <div class="space-y-3">
+              <!-- 5 Stars -->
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-bold text-slate-600 w-12 text-right">5 Stars</span>
+                <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-[#C9A84C] rounded-full" style="width: 90%;"></div>
+                </div>
+                <span class="text-xs font-bold text-slate-600 w-8">90%</span>
+              </div>
+              <!-- 4 Stars -->
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-bold text-slate-600 w-12 text-right">4 Stars</span>
+                <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-[#C9A84C] rounded-full" style="width: 7%;"></div>
+                </div>
+                <span class="text-xs font-bold text-slate-600 w-8">7%</span>
+              </div>
+              <!-- 3 Stars -->
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-bold text-slate-600 w-12 text-right">3 Stars</span>
+                <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-[#C9A84C] rounded-full" style="width: 3%;"></div>
+                </div>
+                <span class="text-xs font-bold text-slate-600 w-8">3%</span>
+              </div>
+            </div>
+            <p class="text-slate-500 text-[10px] mt-6 font-medium text-center md:text-right italic">Based on 100+ guest
+              reviews</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="marquee-container relative w-full flex flex-col pt-4 pb-12">
       <!-- Row 1 -->
